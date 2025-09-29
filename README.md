@@ -39,7 +39,7 @@ Dentro da pasta do projeto, instale as dependências principais:
 ```
 npm install
 ```
-2. Instalar bibliotecas adicionais:
+### 2. Instalar bibliotecas adicionais:
 
 Instale as bibliotecas necessárias para navegação e comunicação com a API:
 Instalar React Navigation:
@@ -58,7 +58,7 @@ Instalar AsyncStorage para persistência de dados:
 ```
 npm install @react-native-async-storage/async-storage
 ```
-3. Rodar o Projeto:
+### 3. Rodar o Projeto:
 
 Com as dependências instaladas, você pode rodar o projeto usando o Expo:
 
