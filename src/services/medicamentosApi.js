@@ -3,7 +3,7 @@ import { medicamentoHttp } from "./api";
 // Listar todos os medicamentos
 export async function listMedicamento() {
   const { data } = await medicamentoHttp.get("/medicamento");
-  return data; // array
+  return data;
 }
 
 // Criar um novo medicamento
