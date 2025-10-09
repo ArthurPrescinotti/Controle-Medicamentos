@@ -12,7 +12,11 @@ export default function MedicamentoFormScreen({ navigation }) {
   // Função para salvar o medicamento
   const handleSave = async () => {
     if (!nome || !dosagem || !horarios) {
-      Alert.alert("Atenção", "Preencha pelo menos nome, dosagem e horários.");
+      if ((Platform.OS = "web")) {
+        alert("Atenção, Preencha pelo menos nome, dosagem e horários.");
+      } else {
+        Alert.alert("Atenção", "Preencha pelo menos nome, dosagem e horários.");
+      }
       return;
     }
 
@@ -26,12 +30,19 @@ export default function MedicamentoFormScreen({ navigation }) {
       });
 
       // Alerta simples confirmando a adição do medicamento
-      Alert.alert("Sucesso", "Medicamento adicionado com sucesso!");
-
+      if ((Platform.OS = "web")) {
+        alert("Sucesso, Medicamento adicionado com sucesso!");
+      } else {
+        Alert.alert("Sucesso", "Medicamento adicionado com sucesso!");
+      }
       // Navegar para a lista de medicamentos
       navigation.navigate("MedicamentosList");
     } catch (e) {
-      Alert.alert("Erro", "Não foi possível criar o medicamento.");
+      if ((Platform.OS = "web")) {
+        alert("Erro, Não foi possível criar o medicamento.");
+      } else {
+        Alert.alert("Erro", "Não foi possível criar o medicamento.");
+      }
     }
   };
 

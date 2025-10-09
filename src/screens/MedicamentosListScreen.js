@@ -24,7 +24,11 @@ export default function MedicamentosListScreen() {
       const list = await listMedicamento();
       setData(list);
     } catch (e) {
-      Alert.alert("Erro", "Não foi possível carregar os medicamentos.");
+      if ((Platform.OS = "web")) {
+        alert("Erro, Não foi possível carregar os medicamentos");
+      } else {
+        Alert.alert("Erro", "Não foi possível carregar os medicamentos.");
+      }
     } finally {
       setRefreshing(false);
     }
