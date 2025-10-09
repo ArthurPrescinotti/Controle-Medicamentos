@@ -36,7 +36,6 @@ export default function MedicamentosListScreen() {
   }, []);
 
   // Função para excluir medicamento
-  // Função para excluir medicamento
   const handleDelete = async (id) => {
     if (Platform.OS === "web") {
       // Para a web
