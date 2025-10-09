@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { View, Text, TextInput, Button, Alert } from "react-native";
+import { View, Text, TextInput, Button, Alert, Platform } from "react-native";
 import { AuthContext } from "../contexts/AuthContext";
 
 export default function LoginScreen() {
@@ -14,7 +14,11 @@ export default function LoginScreen() {
       setLoading(true);
       await signIn(email.trim(), password);
     } catch {
-      Alert.alert("Falha no login", "Use as credenciais padrão do ReqRes.");
+      if ((Platform.OS = "web")) {
+        alert("Falha no login", "Use as credenciais padrão do ReqRes.");
+      } else {
+        Alert.alert("Falha no login", "Use as credenciais padrão do ReqRes.");
+      }
     } finally {
       setLoading(false);
     }

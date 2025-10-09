@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, Alert } from "react-native";
+import { View, Text, TextInput, Button, Alert, Platform } from "react-native";
 import { createMedicamento } from "../services/medicamentosApi"; // Função para criar medicamento na API
 
 export default function MedicamentoFormScreen({ navigation }) {
