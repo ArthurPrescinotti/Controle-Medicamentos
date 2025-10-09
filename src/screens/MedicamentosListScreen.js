@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, RefreshControl, Alert } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  RefreshControl,
+  Alert,
+  Platform,
+} from "react-native";
 import {
   listMedicamento,
   deleteMedicamento,
@@ -29,21 +36,34 @@ export default function MedicamentosListScreen() {
   }, []);
 
   // Função para excluir medicamento
+  // Função para excluir medicamento
   const handleDelete = async (id) => {
-    Alert.alert(
-      "Confirmar exclusão",
-      "Tem certeza de que deseja excluir este medicamento?",
-      [
-        { text: "Cancelar", style: "cancel" },
-        {
-          text: "Excluir",
-          onPress: async () => {
-            await deleteMedicamento(id);
-            setData((prev) => prev.filter((m) => m.id !== id));
+    if (Platform.OS === "web") {
+      // Para a web
+      const confirmation = window.confirm(
+        "Tem certeza de que deseja excluir este medicamento?"
+      );
+      if (confirmation) {
+        await deleteMedicamento(id);
+        setData((prev) => prev.filter((m) => m.id !== id));
+      }
+    } else {
+      // Para dispositivos móveis (iOS/Android)
+      Alert.alert(
+        "Confirmar exclusão",
+        "Tem certeza de que deseja excluir este medicamento?",
+        [
+          { text: "Cancelar", style: "cancel" },
+          {
+            text: "Excluir",
+            onPress: async () => {
+              await deleteMedicamento(id);
+              setData((prev) => prev.filter((m) => m.id !== id));
+            },
           },
-        },
-      ]
-    );
+        ]
+      );
+    }
   };
 
   return (
