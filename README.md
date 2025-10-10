@@ -10,23 +10,38 @@ Aplicativo **React Native** para gerenciamento de medicamentos. Permite ao usuá
 
 ## ✨ **Funcionalidades**:
 
-1. **Cadastro de Medicamento**:
-   - Tela para adicionar novos medicamentos, incluindo campos para nome, dosagem, horário de uso e observações.
-   
-2. **Exibição de Medicamentos**:
-   - Lista todos os medicamentos cadastrados, com a possibilidade de visualizar detalhes como nome, dosagem, horário de uso e observações.
-   
-3. **Exclusão de Medicamento**:
-   - O usuário pode excluir medicamentos da lista com um clique, sendo solicitado uma confirmação antes de realizar a exclusão.
 
+### 1. **Tela de Login**:
+   - Tela inicial onde o usuário se autentica antes de acessar o aplicativo.
+   - Exemplo da tela de login:
+     
+     ![Imagem do WhatsApp de 2025-10-09 à(s) 22 32 13_e5c15807](https://github.com/user-attachments/assets/6a8101cc-bf81-48ba-a25a-b147eeab1f94)
+
+
+### 2. **Cadastro de Medicamento**:
+   - Tela para adicionar novos medicamentos, incluindo campos para nome, dosagem, horário de uso e observações.
+   - Exemplo da tela de cadastro:
+     
+     ![Imagem do WhatsApp de 2025-10-09 à(s) 22 32 13_f36b5459](https://github.com/user-attachments/assets/857a58ac-e54a-432a-8786-b1a0a65bbec1)
+
+
+### 3. **Exibição de Medicamentos**:
+   - Lista todos os medicamentos cadastrados, com a possibilidade de visualizar detalhes como nome, dosagem, horário de uso e observações.
+   - Exemplo da tela de listagem:
+     
+     ![Imagem do WhatsApp de 2025-10-09 à(s) 22 32 13_844eed34](https://github.com/user-attachments/assets/e79dadac-a4f1-4d67-913a-a566af620ed0)
+
+
+### 4. **Exclusão de Medicamento**:
+   - O usuário pode excluir medicamentos da lista com um clique, sendo solicitado uma confirmação antes de realizar a exclusão.
 ---
 
 ## 🧭 **Fluxo do App**:
 
-1. **MedicamentosListScreen** → lista todos os medicamentos.
-2. **MedicamentoFormScreen** → formulário para cadastrar novos medicamentos.
-3. **Excluir Medicamento** → opção para excluir medicamentos da lista.
-4. **Refrescar a Lista**: A lista de medicamentos pode ser atualizada através de um gesto de "pull to refresh".
+### 1. **MedicamentosListScreen** → lista todos os medicamentos.
+### 2. **MedicamentoFormScreen** → formulário para cadastrar novos medicamentos.
+### 3. **Excluir Medicamento** → opção para excluir medicamentos da lista.
+### 4. **Refrescar a Lista**: A lista de medicamentos pode ser atualizada através de um gesto de "pull to refresh".
 
 ---
 
