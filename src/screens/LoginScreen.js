@@ -14,8 +14,8 @@ export default function LoginScreen() {
       setLoading(true);
       await signIn(email.trim(), password);
     } catch {
-      if ((Platform.OS = "web")) {
-        alert("Falha no login", "Use as credenciais padrão do ReqRes.");
+      if (Platform.OS === "web") {
+        alert("Falha no login, Use as credenciais padrão do ReqRes.");
       } else {
         Alert.alert("Falha no login", "Use as credenciais padrão do ReqRes.");
       }
